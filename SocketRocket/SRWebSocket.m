@@ -870,7 +870,7 @@ static inline BOOL closeCodeIsValid(int closeCode) {
             [self handleCloseWithData:frameData];
             break;
         case SROpCodePing:
-            [self handlePing:frameData];
+            [self handlePing:[frameData copy]];
             break;
         case SROpCodePong:
             [self handlePong];
